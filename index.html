@@ -37,9 +37,8 @@ body {
 /* 💌 envelope */
 .envelope {
     position: relative;
-    width: 92vw;
-    max-width: 420px;
-    height: 60vh;   /* 👈 kam kar diya */
+    width: 380px;
+    height: 320px;
     background: #ff6f91;
     border-radius: 12px;
     overflow: hidden;
@@ -54,7 +53,6 @@ body {
     background:
         linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
         url("sa.png") no-repeat;
-
     background-size: 90%;
     background-position: center 80%;
     
@@ -72,7 +70,7 @@ body {
     top: 4%;
     left: 4%;
     border-radius: 10px;
-    padding: 11px;
+    padding: 15px;
     box-sizing: border-box;
     transform: translateY(100%);
     transition: 0.6s;
@@ -81,7 +79,7 @@ body {
 
 /* text */
 #typeText {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.6;
     color: #333;
 }
@@ -106,12 +104,6 @@ body {
     30%  { transform: translateX(-50%) scale(1.2) rotate(10deg); }
     60%  { transform: translateX(-50%) scale(0.9) rotate(-10deg); }
     100% { transform: translateX(-50%) scale(0); opacity: 0; }
-}
-
-@media (max-width: 480px) {
-    .envelope {
-        height: 58vh;
-    }
 }
 .seal.break {
     animation: crack 0.6s ease forwards;
@@ -148,7 +140,7 @@ const message = `Dear Devi ji 🤍
 
 Please maaf kar do 😭
 
-Aap ke bina meri life bahut khali khali sa lag rahi hai 🥺 Mujhe pata hai aapki iss narazgi ka reason main khud hoon. Please maaf kar do na madam ji 🤍
+Aap ke bina meri life bahut khali khali si lag rahi hai 🥺 Mujhe pata hai aapki iss narazgi ka reason main khud hoon. Please maaf kar do na madam ji 🤍
 
 Please maaf kar do na… sorry na madam ji… please yaar, please 🥺 Narazgi chor do na 😭 Naraz mat raho madam ji. Main khud ko aap ke bina bahut khali sa mehsoos karta hoon.
 
@@ -156,7 +148,7 @@ Aap ka hona meri life mein bahut zyada important hai… aap ke bina main incompl
 
 Main hi pagal hoon jo maine aapko hurt kiya… khud pe bahut gussa aa raha hai. Please mujhse baat kar lo madam ji, please please 🥺
 
-Aap bahut zyada naraz ho mujhse, aur reason bhi main hi hoon… please madam ji, narazgi chor do na 😭
+Aap bahut zyada naraz ho mujhse, aur reason bhi main hi hoon… please madam ji, narazgi chor do 😭
 
 Maaf kar do na please… madam ji… devi ji 🤍🌺
 
@@ -183,7 +175,7 @@ function typeWriter() {
         document.getElementById("typeText").innerHTML += 
             message.charAt(i) === "\n" ? "<br>" : message.charAt(i);
         i++;
-        setTimeout(typeWriter, 40);
+        setTimeout(typeWriter, 70);
     }
 }
 
@@ -249,11 +241,9 @@ function createFlower() {
 }
 
 // 🌸 dense smooth fall
-setInterval(createFlower, 800);
+setInterval(createFlower, 900);
 
 </script>
 
-</body>
-</html>
 </body>
 </html>
